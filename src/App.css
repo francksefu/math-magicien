@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 section {
   margin-top: 15%;
   margin-left: 30%;
@@ -8,6 +9,7 @@ section {
   height: 312px;
   width: 40%;
 }
+
 div.ligne {
   display: flex;
   flex-direction: row;
@@ -44,6 +46,3 @@ div.ligne > span.deux {
   width: 50%;
   height: inherit;
 }
-
-
-
