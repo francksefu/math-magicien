@@ -1,10 +1,9 @@
 import '../App.css';
 
-
-function Calculator(){
-    return (
+function Calculator() {
+  return (
       <section>
-        <div className ="tableau">0</div>
+        <div className="tableau">0</div>
         <div className="ligne">
           <span>AC</span>
           <span>+/-</span>
@@ -35,8 +34,7 @@ function Calculator(){
           <span className="orange dernier">=</span>
         </div>
       </section>
-    );
-  }
-
+  );
+}
 
 export default Calculator;
