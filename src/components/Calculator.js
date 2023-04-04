@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import '../App.css';
 import calculate from '../logic/calculate';
-import PropTypes from 'prop-types';
-
-IxClickOut.propTypes = {
-  children: PropTypes.any,
-  onClickOut: PropTypes.func,
-};
 
 function Calculator() {
   const [result, setResult] = useState({});
