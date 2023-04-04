@@ -15,7 +15,7 @@ function Calculator() {
         <Span classons="aucun" valeur="AC" cliquons={handleClick} />
         <Span classons="aucun" valeur="+/-" cliquons={handleClick} />
         <Span classons="aucun" valeur="%" cliquons={handleClick} />
-        <Span classons="orange" valeur="+" cliquons={handleClick} />
+        <Span classons="orange" valeur="÷" cliquons={handleClick} />
       </div>
       <div className="ligne">
         <Span classons="aucun" valeur="7" cliquons={handleClick} />
