@@ -10,7 +10,7 @@ function Calculator() {
 
   return (
     <section>
-      <Affichage classons="tableau" afficheur={result.next === null ? result.total : result.next} />
+      <div className="tableau">{result.next === null ? result.total : result.next}</div>
       <div className="ligne">
         <Span classons="aucun" name="AC" cliquons={handleClick} />
         <Span classons="aucun" name="+/-" cliquons={handleClick} />
@@ -36,24 +36,14 @@ function Calculator() {
         <Span classons="orange" name="+" cliquons={handleClick} />
       </div>
       <div className="ligne">
-        <Span classons="deux" name ="0" cliquons={handleClick} />
-        <Span classons="dernier" name ="." cliquons={handleClick} />
-        <Span classons="dernier orange" name ="=" cliquons={handleClick} />
+        <Span classons="deux" name="0" cliquons={handleClick} />
+        <Span classons="dernier" name="." cliquons={handleClick} />
+        <Span classons="dernier orange" name="=" cliquons={handleClick} />
       </div>
     </section>
   );
 }
 
-const Span = (props) => {
-  return (
-    <span className={props.classons} onClick={props.cliquons}>{props.name}</span>
-  );
-};
-
-const Affichage = (props) => {
-  return (
-    <div className={props.classons}>{props.afficheur}</div>
-  );
-};
+const Span = (props) => <span className={props.classons} onClick={props.cliquons}>{props.name}</span>;
 
 export default Calculator;
