@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import '../App.css';
 import calculate from '../logic/calculate';
+import PropTypes from 'prop-types';
+
+IxClickOut.propTypes = {
+  children: PropTypes.any,
+  onClickOut: PropTypes.func,
+};
 
 function Calculator() {
   const [result, setResult] = useState({});
@@ -12,38 +18,40 @@ function Calculator() {
     <section>
       <div className="tableau">{result.next === null ? result.total : result.next}</div>
       <div className="ligne">
-        <Span classons="aucun" name="AC" cliquons={handleClick} />
-        <Span classons="aucun" name="+/-" cliquons={handleClick} />
-        <Span classons="aucun" name="%" cliquons={handleClick} />
-        <Span classons="orange" name="+" cliquons={handleClick} />
+        <Span classons="aucun" valeur="AC" cliquons={handleClick} />
+        <Span classons="aucun" valeur="+/-" cliquons={handleClick} />
+        <Span classons="aucun" valeur="%" cliquons={handleClick} />
+        <Span classons="orange" valeur="+" cliquons={handleClick} />
       </div>
       <div className="ligne">
-        <Span classons="aucun" name="7" cliquons={handleClick} />
-        <Span classons="aucun" name="8" cliquons={handleClick} />
-        <Span classons="aucun" name="9" cliquons={handleClick} />
-        <Span classons="orange" name="x" cliquons={handleClick} />
+        <Span classons="aucun" valeur="7" cliquons={handleClick} />
+        <Span classons="aucun" valeur="8" cliquons={handleClick} />
+        <Span classons="aucun" valeur="9" cliquons={handleClick} />
+        <Span classons="orange" valeur="x" cliquons={handleClick} />
       </div>
       <div className="ligne">
-        <Span classons="aucun" name="4" cliquons={handleClick} />
-        <Span classons="aucun" name="5" cliquons={handleClick} />
-        <Span classons="aucun" name="6" cliquons={handleClick} />
-        <Span classons="orange" name="-" cliquons={handleClick} />
+        <Span classons="aucun" valeur="4" cliquons={handleClick} />
+        <Span classons="aucun" valeur="5" cliquons={handleClick} />
+        <Span classons="aucun" valeur="6" cliquons={handleClick} />
+        <Span classons="orange" valeur="-" cliquons={handleClick} />
       </div>
       <div className="ligne">
-        <Span classons="aucun" name="1" cliquons={handleClick} />
-        <Span classons="aucun" name="2" cliquons={handleClick} />
-        <Span classons="aucun" name="3" cliquons={handleClick} />
-        <Span classons="orange" name="+" cliquons={handleClick} />
+        <Span classons="aucun" valeur="1" cliquons={handleClick} />
+        <Span classons="aucun" valeur="2" cliquons={handleClick} />
+        <Span classons="aucun" valeur="3" cliquons={handleClick} />
+        <Span classons="orange" valeur="+" cliquons={handleClick} />
       </div>
       <div className="ligne">
-        <Span classons="deux" name="0" cliquons={handleClick} />
-        <Span classons="dernier" name="." cliquons={handleClick} />
-        <Span classons="dernier orange" name="=" cliquons={handleClick} />
+        <Span classons="deux" valeur="0" cliquons={handleClick} />
+        <Span classons="dernier" valeur="." cliquons={handleClick} />
+        <Span classons="dernier orange" valeur="=" cliquons={handleClick} />
       </div>
     </section>
   );
 }
 
-const Span = (props) => <span className={props.classons} onClick={props.cliquons}>{props.name}</span>;
+const Span = (props) => <span className={props.classons} onClick={props.cliquons}>
+    {props.valeur}
+  </span>;
 
 export default Calculator;
