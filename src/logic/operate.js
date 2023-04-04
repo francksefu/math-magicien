@@ -24,12 +24,11 @@ export default function operate(numberOne, numberTwo, operation) {
   }
 
   if (operation === '%') {
-     try {
+    try {
       return one.mod(two).toString();
     } catch (err) {
       return "Can't find modulo as can't divide by 0.";
     }
   }
-  
   throw Error(`Unknown operation '${operation}'`);
 }
