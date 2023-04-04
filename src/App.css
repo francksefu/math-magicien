@@ -46,3 +46,7 @@ div.ligne > span.deux {
   width: 50%;
   height: inherit;
 }
+
+.aucun {
+  color: black;
+}
