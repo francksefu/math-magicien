@@ -50,3 +50,27 @@ div.ligne > span.deux {
 .aucun {
   color: black;
 }
+
+.quotation {
+  width: 90%;
+  border: 1px solid yellowgreen;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.quotation > p {
+  width: 90%;
+  text-align: center;
+  margin: 5px 5%;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+small {
+  text-align: center;
+}
