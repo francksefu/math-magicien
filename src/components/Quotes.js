@@ -8,7 +8,7 @@ function Quotes() {
   useEffect(() => {
     const send = () => {
       setLoading(true);
-      try{
+      try {
         fetch('https://api.api-ninjas.com/v1/quotes?category=money', {
           method: 'GET',
           headers: { 'X-Api-Key': 'tTySwiau1PsXJs5wvhf1dw==NK8bNzv70yBdLNYz' },
@@ -17,10 +17,10 @@ function Quotes() {
           .then((response) => response.json())
           .then((json) => setData(json));
       } catch {
-        setHasError(true)
+        setHasError(true);
       }
-        setLoading(false)
-      };
+      setLoading(false);
+    };
     send();
   }, [setData, setLoading]);
 
@@ -29,16 +29,22 @@ function Quotes() {
   return (
     <div>
       { data.length ? (
-      <div className="quotation">
+        <div className="quotation">
         <h2>Quotes</h2>
-        <p>{data[0].quote}</p>
-        <p><small>
+        <p>
+          {data[0].quote}
+        </p>
+        <p>
+        <small>
           author : {data[0].author}
-        </small></p>
-        <p><small>
+        </small>
+        </p>
+        <p>
+        <small>
           category : {data[0].category}
-        </small></p>
-      </div>
+        </small>
+        </p>
+        </div>
     ) : (<p>Loading..</p>)}
     </div>
   );
