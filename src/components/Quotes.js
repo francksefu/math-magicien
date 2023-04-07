@@ -36,18 +36,18 @@ function Quotes() {
           </p>
           <p>
             <small>
-              author : 
+              author :
               {data[0].author}
             </small>
           </p>
           <p>
             <small>
-              category : 
+              category :
               {data[0].category}
             </small>
           </p>
         </div>
-    ) : (<p>Loading..</p>)}
+      ) : (<p>Loading..</p>)}
     </div>
   );
 }
