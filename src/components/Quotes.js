@@ -30,20 +30,22 @@ function Quotes() {
     <div>
       { data.length ? (
         <div className="quotation">
-        <h2>Quotes</h2>
-        <p>
-          {data[0].quote}
-        </p>
-        <p>
-        <small>
-          author : {data[0].author}
-        </small>
-        </p>
-        <p>
-        <small>
-          category : {data[0].category}
-        </small>
-        </p>
+          <h2>Quotes</h2>
+          <p>
+            {data[0].quote}
+          </p>
+          <p>
+            <small>
+              author : 
+              {data[0].author}
+            </small>
+          </p>
+          <p>
+            <small>
+              category : 
+              {data[0].category}
+            </small>
+          </p>
         </div>
     ) : (<p>Loading..</p>)}
     </div>
