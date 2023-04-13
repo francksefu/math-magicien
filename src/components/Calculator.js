@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { useState } from 'react';
 import '../App.css';
 import calculate from '../logic/calculate';
@@ -7,9 +8,16 @@ function Calculator() {
   const handleClick = (e) => {
     setResult(calculate(result, e.target.textContent));
   };
+  const myStyle = {
+    marginTop: '3%',
+    textAlign: 'center',
+    padding: '10px',
+  };
 
   return (
     <section>
+      <h2>Calculator</h2>
+      <p style={myStyle}>Let&apos; do some math : </p>
       <div className="tableau">{result.next === null ? result.total : result.next}</div>
       <div className="ligne">
         <Span classons="aucun" valeur="AC" cliquons={handleClick} />
@@ -44,8 +52,16 @@ function Calculator() {
   );
 }
 
-const Span = (props) => <span className={props.classons} onClick={props.cliquons}>
-    {props.valeur}
-  </span>;
+const Span = ({ classons, cliquons, valeur }) => (
+  <button type="button" className={classons} onClick={cliquons}>
+    {valeur}
+  </button>
+);
+
+Span.propTypes = {
+  classons: PropTypes.string.isRequired,
+  cliquons: PropTypes.func.isRequired,
+  valeur: PropTypes.string.isRequired,
+};
 
 export default Calculator;
