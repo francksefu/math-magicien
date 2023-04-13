@@ -2,28 +2,14 @@ import { render, screen } from '@testing-library/react';
 import Calculator from './components/Calculator';
 import Home from './components/Home';
 import Quotes from './components/Quotes';
+import operate from './logic/operate';
+
 //import TestRenderer from 'react-test-renderer';
-
-
 test('renders learn react link', () => {
-  ;
-  
   expect(render(<Calculator />)).toMatchSnapshot();
   expect(render(<Home />)).toMatchSnapshot();
   expect(render(<Quotes />)).toMatchSnapshot();
+
+  expect(operate(2, 3, '+').toEqual('5'));
 });
-/*
-import Link from '../Link';
 
-it('renders correctly', () => {
-  const tree = renderer
-    .create(<Link page="http://www.facebook.com">Facebook</Link>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});*/
-
-/*
-it('renders correctly', () => {
-  const tree = TestRenderer.create(<Calculator />).toJSON();
-  expect(tree).toMatchSnapshot();
-});*/
