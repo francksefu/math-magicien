@@ -1,4 +1,4 @@
-import calculate from "./logic/calculate";
+import calculate from "./calculate";
 
 describe('Calculate', () => {
 

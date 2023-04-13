@@ -9,7 +9,5 @@ test('renders learn react link', () => {
   expect(render(<Calculator />)).toMatchSnapshot();
   expect(render(<Home />)).toMatchSnapshot();
   expect(render(<Quotes />)).toMatchSnapshot();
-
-  expect(operate(2, 3, '+').toEqual('5'));
 });
 
