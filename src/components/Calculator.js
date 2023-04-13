@@ -10,6 +10,8 @@ function Calculator() {
 
   return (
     <section>
+      <h2>Calculator</h2>
+      <p style={{padding: "10px", marginTop: "3%", textAlign: "center"}}>Let' do some math : </p>
       <div className="tableau">{result.next === null ? result.total : result.next}</div>
       <div className="ligne">
         <Span classons="aucun" valeur="AC" cliquons={handleClick} />
