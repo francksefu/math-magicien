@@ -1,4 +1,4 @@
-import operate from "./operate";
+import operate from './operate';
 
 describe('Validation for operate', () => {
   test('1+2=3', () => {
