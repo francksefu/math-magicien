@@ -67,7 +67,8 @@ div.ligne > span.deux {
   margin: 5px 5%;
 }
 
-h2, h1 {
+h2, 
+h1 {
   text-align: center;
   margin: 10px;
 }
@@ -97,6 +98,8 @@ ul {
   margin: 20px;
 }
 
-.home > h2, section > h2, .quotation > h2 {
+.home > h2,
+section > h2,
+.quotation > h2 {
   font-weight: 200;
 }
