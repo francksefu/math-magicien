@@ -30,7 +30,7 @@ div.tableau {
   color: white;
 }
 
-span {
+button {
   width: 25%;
   height: inherit;
   background-color: aliceblue;
@@ -39,11 +39,11 @@ span {
   border: 1px solid white;
 }
 
-span.orange {
+button.orange {
   background-color: orange;
 }
 
-div.ligne > span.deux {
+div.ligne > button.deux {
   width: 50%;
   height: inherit;
 }
