@@ -11,7 +11,7 @@ function Calculator() {
   return (
     <section>
       <h2>Calculator</h2>
-      <p style={{padding: "10px", marginTop: "3%", textAlign: "center"}}>Let' do some math : </p>
+      <p style={{ padding: '10px', marginTop: '3%', textAlign: 'center' }}>Let' do some math : </p>
       <div className="tableau">{result.next === null ? result.total : result.next}</div>
       <div className="ligne">
         <Span classons="aucun" valeur="AC" cliquons={handleClick} />
@@ -46,8 +46,10 @@ function Calculator() {
   );
 }
 
-const Span = (props) => <span className={props.classons} onClick={props.cliquons}>
+const Span = (props) => (
+  <span className={props.classons} onClick={props.cliquons}>
     {props.valeur}
-  </span>;
+  </span>
+);
 
 export default Calculator;
