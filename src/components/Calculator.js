@@ -52,7 +52,7 @@ function Calculator() {
   );
 }
 
-const Span = ({ classons, cliquons, valeur }) => (
+export const Span = ({ classons, cliquons, valeur }) => (
   <button type="button" className={classons} onClick={cliquons}>
     {valeur}
   </button>
